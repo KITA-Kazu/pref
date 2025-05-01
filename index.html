@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>都道府県名産品クイズ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="quiz-container">
+        <h1>都道府県名産品クイズ</h1>
+        <p>表示された名産品から、都道府県名を当てよう！</p>
+
+        <!-- 問題エリア -->
+        <div id="question-area">
+            <p id="progress">問題 1 / 20</p> <!-- 問題数を表示 -->
+            <div id="specialty-area">
+                <h2>これらの名産品といえば？</h2>
+                <ul id="specialty-list">
+                    <!-- 名産品はJavaScriptで表示 -->
+                </ul>
+            </div>
+            <div id="options" class="options-grid">
+                <!-- 選択肢ボタンはJavaScriptで生成 -->
+            </div>
+            <p id="feedback"></p>
+            <button id="next-btn" style="display: none;">次へ</button>
+        </div>
+
+        <!-- 結果エリア (初期非表示) -->
+        <div id="result-area" style="display: none;">
+            <h2>結果発表</h2>
+            <p id="score"></p>
+            <p id="final-feedback"></p>
+            <button id="restart-btn">もう一度挑戦する</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e6f3ff; /* 明るい青系の背景 */
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#quiz-container {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 650px; /* 少し広め */
+}
+
+h1 {
+    color: #0056b3; /* 濃い青 */
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+#progress {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#specialty-area {
+    margin-bottom: 25px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+}
+
+#specialty-list {
+    list-style-type: none; /* 点を消す */
+    padding: 0;
+    margin: 0;
+}
+
+#specialty-list li {
+    font-size: 1.3em; /* 名産品を大きく */
+    line-height: 1.6;
+    color: #343a40;
+    margin-bottom: 8px; /* 各名産品の間隔 */
+    padding: 8px 0;
+    border-bottom: 1px dashed #ced4da; /* 区切り線 */
+}
+#specialty-list li:last-child {
+    margin-bottom: 0;
+    border-bottom: none; /* 最後の要素の線は消す */
+}
+
+
+/* --- 選択肢ボタン --- */
+.options-grid {
+    display: grid;
+    /* 画面幅に応じて列数を変更 (例: 2列) */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.option-btn {
+    background-color: #17a2b8; /* シアン系の色 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.option-btn:hover:not(:disabled) {
+    background-color: #138496;
+}
+
+.option-btn:active:not(:disabled) {
+    transform: scale(0.98);
+}
+
+.option-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.option-btn.correct {
+    background-color: #28a745;
+}
+
+.option-btn.incorrect {
+    background-color: #dc3545;
+}
+
+.option-btn.reveal-correct {
+     outline: 3px solid #198754;
+     outline-offset: 2px;
+}
+
+/* --- フィードバック・ボタンなど --- */
+#feedback {
+    margin-top: 15px;
+    font-weight: bold;
+    min-height: 1.2em;
+}
+
+.correct-feedback {
+    color: #1a7e3a;
+}
+
+.incorrect-feedback {
+    color: #b52b39;
+}
+
+#next-btn, #restart-btn {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+#next-btn:hover, #restart-btn:hover {
+    background-color: #0056b3;
+}
+
+#result-area p {
+    font-size: 1.2em;
+    margin: 15px 0;
+}
+
+#final-feedback {
+    font-weight: bold;
+    line-height: 1.6;
+}
