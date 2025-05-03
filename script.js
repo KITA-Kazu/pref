@@ -194,7 +194,7 @@ function showResults() {
     let finalFeedbackMsg = "";
 
     if (score === QUIZ_LENGTH) { // 全問正解の場合
-        finalFeedbackMsg = "今までのヒントはアナグラムだ。<br>並べ替えて財宝のありかをみつけよ。";
+        finalFeedbackMsg = "財宝のヒントは「うばし」だ。<br>言葉を並べ替えて財宝のありかをみつけよ。";
     } else { // 不正解がある場合
         let encouragement = "";
         const percentage = (score / QUIZ_LENGTH) * 100;
